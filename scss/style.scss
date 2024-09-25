@@ -1,0 +1,73 @@
+@import "_reset";
+@import "_fonts";
+@import "_variables";
+@import "_header";
+@import "_introduction";
+@import "_specialization";
+@import "_about.scss";
+@import "_projects";
+@import "_digital-xperience";
+@import "_price";
+@import "_team";
+@import "_gallery";
+@import "_contacts";
+@import "_copyright";
+body {
+  font-family: "Roboto";
+  background: url("../img/different/bg-1.jpg");
+  color: $maintextcolor;
+  position: relative;
+}
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header__container {
+  max-width: 1720px;
+}
+.introduction__container {
+  max-width: 1940px;
+  margin: -80px auto 0 auto;
+  padding: 0;
+}
+.digital-xperience__container {
+  max-width: 1720px;
+}
+.gallery__container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.catchy-text {
+  color: $accentcolor;
+}
+.title {
+  color: #fff;
+  font-size: 60px;
+  line-height: 77px;
+  @media (max-width: 1320px) {
+    font-size: calc(36px + (60 - 36) * ((100vw - 420px) / (1920 - 420)));
+  }
+}
+.decorative-text {
+  font-size: 168px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgba(11, 14, 23, 0.4);
+  line-height: 100px;
+  position: absolute;
+}
+.active-button {
+  color: $accentcolor;
+  border-bottom: 2px solid $accentcolor;
+}
+.hide {
+  display: none;
+}
+.checkk {
+  color: red;
+}
+.footer {
+  background: rgb(26, 29, 38);
+}

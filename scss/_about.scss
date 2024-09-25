@@ -1,0 +1,199 @@
+.about {
+  margin: 0 0 140px 0;
+  @media (max-width: 1320px) {
+    margin: 0 0 70px 0;
+  }
+  &__container {
+    position: relative;
+  }
+  &__grid-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) repeat(2, 300px);
+    grid-template-rows: 78px auto 270px;
+    gap: 0 30px;
+    position: relative;
+    position: relative;
+    &::before {
+      content: url("../img/different/star-line.svg");
+      display: block;
+      position: absolute;
+      top: -225px;
+      left: -300px;
+      z-index: -1;
+      @media (max-width: 1070px) {
+        display: none;
+      }
+    }
+    grid-template-areas:
+      "title title second"
+      "text first second"
+      "statistics first second";
+    @media (max-width: 1320px) {
+      width: 1000px;
+      margin: 0 auto;
+      grid-template-columns: minmax(auto, 650px) 300px;
+      grid-template-areas:
+        "title title"
+        "text first"
+        "statistics first"
+        "second second";
+    }
+    @media (max-width: 1070px) {
+      width: 100%;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: auto;
+      grid-template-areas:
+        "title title"
+        "text text"
+        "first second"
+        "statistics statistics";
+    }
+    @media (max-width: 670px) {
+      gap: 0 20px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    margin: 0 0 10px 0;
+    line-height: 77px;
+    @media (max-width: 1070px) {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+    max-width: 400px;
+    line-height: 26px;
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(#c5e1e400, #c5e1e4ff, #c5e1e400);
+    -moz-border-image: -moz-linear-gradient(#c5e1e400, #c5e1e4ff, #c5e1e400);
+    -webkit-border-image: -webkit-linear-gradient(
+      #c5e1e400,
+      #c5e1e4ff,
+      #c5e1e400
+    );
+    border-image-slice: 1;
+    margin: 8px 0 17px 78px;
+    padding: 30px 0 0 30px;
+    @media (max-width: 1070px) {
+      margin: 0;
+      padding: 20px 0 0 0;
+      border-left: none;
+      max-width: 600px;
+    }
+    @media (max-width: 670px) {
+      max-width: 388px;
+    }
+  }
+
+  &__statistics {
+    grid-area: statistics;
+    position: relative;
+  }
+
+  &__percentages {
+    display: inline-block;
+    font-size: 64px;
+    color: #fff;
+    margin: 0 44px 30px 0;
+    @media (max-width: 670px) {
+      margin: 0 30px 20px 0;
+    }
+  }
+  &__percentage-sign {
+    font-size: 34px;
+  }
+
+  &__percentages-text {
+    display: inline-block;
+    font-size: 20px;
+    max-width: 78px;
+  }
+
+  &__img-container {
+    display: block;
+    width: 300px;
+    max-height: 500px;
+    @media (max-width: 670px) {
+      width: 185px;
+    }
+    &_mini {
+      width: 408px;
+      height: 175px;
+    }
+    &_first {
+      grid-area: first;
+      @media (max-width: 1070px) {
+        margin: 50px 0 30px 0;
+      }
+    }
+    &_second {
+      grid-area: second;
+      @media (max-width: 1320px) {
+        display: block;
+        margin: 20px auto 0;
+      }
+      @media (max-width: 1070px) {
+        margin: 0;
+      }
+      @media (max-width: 670px) {
+        padding: 0 0 80px 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__read-more {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: url("../img/about/read-more-img.png") no-repeat;
+    border-radius: 50%;
+    top: 110px;
+    left: 470px;
+    background-position: center;
+    background-size: 140%;
+    &:active {
+      display: flex;
+    }
+    &:focus {
+      display: flex;
+    }
+    @media (max-width: 1070px) {
+      display: none;
+    }
+  }
+
+  &__icon {
+  }
+  &__decorative-text {
+    position: absolute;
+    font-size: 124px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.08);
+    top: 660px;
+    left: 40%;
+    z-index: -1;
+    transform: rotate(-90deg);
+    display: none;
+    @media (max-width: 670px) {
+      display: block;
+    }
+    @media (max-width: 499px) {
+      left: 35%;
+    }
+  }
+}

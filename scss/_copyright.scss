@@ -1,0 +1,16 @@
+.copyright {
+  border-top: 1px solid #2e313a;
+  padding: 15px 0;
+  &__paragraph {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  &__mail {
+    color: $accentcolor;
+    transition: 0.3s;
+    &:hover {
+      color: $accentcolorhover;
+    }
+  }
+}

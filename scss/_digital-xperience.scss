@@ -1,0 +1,113 @@
+.digital-xperience {
+  margin: 0 0 140px 0;
+  background: #23272f;
+  overflow: hidden;
+  @media (max-width: 1320px) {
+    margin: 0 0 70px 0;
+  }
+  &__container {
+    position: relative;
+    &::before {
+      content: "R";
+      position: absolute;
+      right: -100px;
+      top: 0;
+      font-size: 920px;
+      -webkit-text-fill-color: transparent;
+      background: url("../img/different/bg-1.jpg");
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: black;
+      line-height: 0.7;
+      z-index: 0;
+      @media (max-width: 1920px) {
+        right: 0;
+      }
+      @media (max-width: 1484px) {
+        left: 0;
+        top: auto;
+        bottom: 0;
+      }
+      @media (max-width: 872px) {
+        display: none;
+      }
+    }
+  }
+
+  &__flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 200px;
+    padding: 100px 0 61px 135px;
+    gap: 40px 142px;
+    height: 100%;
+    // background: #23272f;
+    @media (max-width: 1484px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0 53px;
+      *:last-child {
+        align-self: flex-end;
+        @media (max-width: 574px) {
+          align-self: center;
+        }
+      }
+    }
+    @media (max-width: 872px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__text-container {
+    max-width: 630px;
+    @media (max-width: 872px) {
+      max-width: 388px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 50px 0;
+    @media (max-width: 872px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__table {
+    margin: 0 0 50px 0;
+  }
+
+  &__percentages {
+    color: $accentcolor;
+    font-size: 32px;
+    line-height: 70px;
+    width: 175px;
+    text-align: start;
+    font-weight: 400;
+    padding: 0 0 10px 0;
+    @media (max-width: 872px) {
+      width: 130px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: start;
+    line-height: 21px;
+  }
+
+  &__link {
+    color: #fff;
+    display: inline-block;
+    padding: 20px 35px;
+    border: 1px solid #fff;
+    font-weight: 500;
+    transition: 0.3s;
+    &:hover {
+      background: rgba($color: #fff, $alpha: 0.1);
+    }
+  }
+}
